@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include <SDL2/SDL.h>
 
 SDL_Window * g_pWindow = 0;
@@ -50,3 +51,6 @@ int main(int argc, char* args[]){
 
 	return 0;
 }
+=======
+
+>>>>>>> 55fc8f0bcadae2598323c4545b33ec2503ac0d69
