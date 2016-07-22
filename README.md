@@ -1,6 +1,10 @@
 # SDL2-Projects
 My Progress learning SDL2 framework.
 
-I use Arch Linux for running these projects. To compile and run it install SDL2:
--- sudo pacman -S sdl2
-and use makefile provided
+I use [Arch Linux](https://www.archlinux.org/) for running these projects. To compile and run it install [SDL2 library](https://www.libsdl.org/index.php):
+
+` sudo pacman -S sdl2 `
+
+and use *makefile* provided:
+
+` make all `
