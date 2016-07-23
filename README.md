@@ -8,3 +8,10 @@ I use [Arch Linux](https://www.archlinux.org/) for running these projects. To co
 and use *makefile* provided:
 
 ` make all `
+
+Projects
+-------
+
+1. SDL2 Test found in TEST folder
+2. Basic Game class found in GAME_CLASS
+3. Drawing in SDL found in DRAWING
