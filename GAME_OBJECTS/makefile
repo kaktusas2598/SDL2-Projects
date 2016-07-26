@@ -1,5 +1,5 @@
 #Which file to compile
-OBJS = main.cpp Game.cpp TextureManager.cpp GameObject.cpp Player.cpp
+OBJS = main.cpp Game.cpp TextureManager.cpp SDLGameObject.cpp Player.cpp Enemy.cpp
 
 #Compiler used
 CC = g++
