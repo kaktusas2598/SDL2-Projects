@@ -7,14 +7,14 @@ InputHandler::InputHandler(){
 
 	m_mousePosition = new Vector2D(0,0);
 
+	m_keyStates = 0;
+
 	for(int i =0; i < 3; i++){
 		m_mouseButtonStates.push_back(false);
 	}
 }
 void InputHandler::update(){
 	SDL_Event event;
-
-	m_keyStates = SDL_GetKeyboardState(0);
 
 	while(SDL_PollEvent(&event)){
 		switch(event.type){
@@ -54,8 +54,10 @@ bool InputHandler::isKeyDown(SDL_Scancode key){
 	return false;
 }
 void InputHandler::onKeyDown(){
+	m_keyStates = SDL_GetKeyboardState(0);
 }
 void InputHandler::onKeyUp(){
+	m_keyStates = SDL_GetKeyboardState(0);
 }
 void InputHandler::onMouseMove(SDL_Event& event){
 	m_mousePosition->setX(event.motion.x);
