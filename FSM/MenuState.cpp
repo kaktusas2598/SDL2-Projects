@@ -1,7 +1,7 @@
 #include "MenuState.h"
 #include <iostream>
 
-const std::string MenuState::s_menuID = 0;
+const std::string MenuState::s_menuID = "MENU";
 
 void MenuState::update(){
 	//

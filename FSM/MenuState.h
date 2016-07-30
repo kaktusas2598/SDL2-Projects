@@ -12,7 +12,7 @@ class MenuState : public GameState {
 		virtual bool onEnter();
 		virtual bool onExit();
 
-		virtual std::string gtStateID() const { return s_menuID; }
+		virtual std::string getStateID() const { return s_menuID; }
 
 	private:
 

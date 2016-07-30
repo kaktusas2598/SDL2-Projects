@@ -41,6 +41,9 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, bo
 		return false; //could not init SDL
 	}
 
+	m_pGameStateMachine = new GameStateMachine();
+	m_pGameStateMachine->changeState(new MenuState());
+
 	TextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer);
 
 	m_gameObjects.push_back(new Player(new LoaderParams(0, 100, 128, 82, "animate")));
@@ -57,25 +60,27 @@ void Game::render(){
 	//clear the renderer to draw color
 	SDL_RenderClear(m_pRenderer);
 
-	//m_go.draw(m_pRenderer);
-	//m_player.draw(m_pRenderer);
-	for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
+	/*for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
 		m_gameObjects[i]->draw();
-	}
+	}*/
+	m_pGameStateMachine->render();
 	
 	//draw to the screen
 	SDL_RenderPresent(m_pRenderer);
 }
 void Game::update(){
 	//m_currentFrame = int((SDL_GetTicks() / 100) % 6);
-	//m_go.update();
-	//m_player.update();
-	for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
+	/*for(std::vector<GameObject*>::size_type i = 0; i != m_gameObjects.size(); i++){
 		m_gameObjects[i]->update();
-	}
+	}*/
+	m_pGameStateMachine->update();
 }
 void Game::handleEvents(){
 	InputHandler::Instance()->update();
+
+	if(InputHandler::Instance()->isKeyDown(SDL_SCANCODE_RETURN)){
+		m_pGameStateMachine->changeState(new PlayState());
+	}
 }
 void Game::clean(){
 	std::cout << "Cleaning game..\n";

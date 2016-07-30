@@ -5,6 +5,10 @@
 #include <vector>
 #include "Player.h"
 #include "Enemy.h"
+#include "GameStateMachine.h"
+#include "GameState.h"
+#include "MenuState.h"
+#include "PlayState.h"
 
 //Game singleton
 class Game{
@@ -42,6 +46,8 @@ class Game{
 		bool m_bRunning;
 
 		std::vector<GameObject*> m_gameObjects;
+
+		GameStateMachine* m_pGameStateMachine;
 
 		static Game* s_pInstance;
 };

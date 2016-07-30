@@ -2,7 +2,7 @@
 #define __PlayState__
 
 #include <string>
-#include "PlayState.h"
+#include "GameState.h"
 
 class PlayState : public GameState {
 	public:
@@ -12,7 +12,7 @@ class PlayState : public GameState {
 		virtual bool onEnter();
 		virtual bool onExit();
 
-		virtual std::string gtStateID() const { return s_playID; }
+		virtual std::string getStateID() const { return s_playID; }
 
 	private:
 
