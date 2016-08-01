@@ -1,5 +1,5 @@
 #Which file to compile
-OBJS = main.cpp Game.cpp GameState.cpp GameStateMachine.cpp MenuState.cpp PlayState.cpp InputHandler.cpp TextureManager.cpp SDLGameObject.cpp Player.cpp Enemy.cpp
+OBJS = main.cpp Game.cpp GameState.cpp GameStateMachine.cpp MenuState.cpp PlayState.cpp InputHandler.cpp TextureManager.cpp SDLGameObject.cpp Player.cpp Enemy.cpp MenuButton.cpp
 
 #Compiler used
 CC = g++

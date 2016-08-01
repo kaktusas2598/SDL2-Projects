@@ -2,7 +2,9 @@
 #define __MenuState__
 
 #include <string>
+#include <vector>
 #include "GameState.h"
+#include "GameObject.h"
 
 class MenuState : public GameState {
 	public:
@@ -17,6 +19,8 @@ class MenuState : public GameState {
 	private:
 
 		static const std::string s_menuID;
+
+		std::vector<GameObject*> m_gameObjects;
 };
 
 #endif
