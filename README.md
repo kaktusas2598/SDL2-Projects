@@ -15,3 +15,5 @@ Projects
 1. SDL2 Test found in TEST folder
 2. Basic Game class found in GAME_CLASS
 3. Drawing in SDL found in DRAWING
+4. Movement and input
+5. FSM
