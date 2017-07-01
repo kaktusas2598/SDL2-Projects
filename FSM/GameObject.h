@@ -5,7 +5,7 @@
 #include "LoaderParams.h"
 
 //Abstract Base Class
-//Look for alternative systems instead for polmotfism and inheritance with more objects
+//Look for alternative systems instead for polymorfism and inheritance with more objects
 class GameObject{
 	public:
 

@@ -1,5 +1,5 @@
 #Which file to compile
-OBJS = main.cpp Game.cpp GameState.cpp GameStateMachine.cpp MenuState.cpp PlayState.cpp InputHandler.cpp TextureManager.cpp SDLGameObject.cpp Player.cpp Enemy.cpp MenuButton.cpp
+OBJS = main.cpp Game.cpp GameStateMachine.cpp MenuState.cpp PlayState.cpp InputHandler.cpp TextureManager.cpp SDLGameObject.cpp Player.cpp Enemy.cpp MenuButton.cpp
 
 #Compiler used
 CC = g++
@@ -7,7 +7,7 @@ CC = g++
 #Additional compilation options
 # -w suppresses all warnings
 # -g generate debugging info
-COMPILER_FLAGS = -w
+COMPILER_FLAGS = -w -g
 
 #Libraries we're linking ag we're usingainst
 LINKER_FLAGS = -lSDL2 -lSDL2_image
