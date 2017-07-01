@@ -11,6 +11,8 @@ class Player : public SDLGameObject{
 		virtual void draw();
 		virtual void update();
 		virtual void clean();
+
+		void handleInput();
 };
 
 #endif
